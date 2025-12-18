@@ -1,0 +1,157 @@
+/* ⭐ BIG SECTION HEADING */
+.features-heading {
+  text-align: left;
+  font-size:50px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: white;
+  margin-top: 25px;
+  letter-spacing: 2px;
+  vertical-align: bottom;
+  font-family:"poppins", sans-serif;
+}
+
+.bold {
+  background: linear-gradient(120deg, cyan, #39ffe1, rgb(255, 217, 1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 55px;
+  padding-top: 10px;
+  font-weight: 600;
+  color: transparent;
+  font-family: "poppins", sans-serif;
+}
+#horizontal-line {
+  margin-top: 5px;
+  border: none;
+  height: 3px;
+  width: 200px;
+  background: linear-gradient(90deg, cyan, #39ffe1, rgb(255, 217, 1));
+  border-radius: 10px;
+}
+
+/* 📌 Full width slider container */
+.full-slider-container {
+  width: 100%;
+  margin-top: 100px;
+   position: relative;
+  z-index: 1 !important; 
+}
+
+/* 📌 Each slide takes full height */
+.full-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-content {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.399);
+   position: relative;
+  z-index: 1 !important; 
+
+
+}
+
+/* ⭐ IMAGE LEFT SIDE */
+.card-image-section {
+  flex: 1;
+  display: flex;
+  justify-content:space-around;
+}
+
+.card-image {
+  width: 50%;
+  border-radius: 30px;
+  max-width: 420px;
+  object-fit: contain;
+
+   filter: drop-shadow(0 0 12px rgba(227, 216, 60, 0.744));
+}
+
+/* ⭐ TEXT RIGHT SIDE */
+.card-feature-section {
+  flex: 1;
+  color: white;
+}
+
+.slidercard-title {
+  font-size: 48px;                /* ⬆️ Bigger */
+  font-weight: 300;
+  margin-bottom: 25px;   
+  font-family: "raddit", system-ui;         /* ⬆️ More spacing below */
+
+
+  /* background: linear-gradient(90deg, cyan, #39ffe1, rgb(255, 217, 1));
+  -webkit-background-clip: text;
+  background-clip: text; */
+  /* color: transparent; */
+}
+
+.card-description {
+  font-size: 22px;                /* Slightly bigger */
+  line-height: 1.5;               /* Better readability */
+  margin-top: 10px;    
+  font-weight: 300;           /* Extra spacing above */
+}
+
+/* ⭐ Swiper Dots */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.6);
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+  margin-top: 40px;
+}
+
+.loader-heading-wrapper {
+  display: flex;
+  flex-direction: row;      /* 🔥 loader and title on same line */
+  align-items: center;      /* vertical centering */
+  justify-content:left;  /* center everything horizontally */
+  gap: 10px;                /* space between loader & title */
+  margin-left: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgb(255, 255, 255);
+  transform: scale(1.3);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+  .card-content {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .card-title {
+    font-size: 32px;
+  }
+
+  .card-description {
+    font-size: 18px;
+  }
+
+  .card-image {
+    width: 80%;
+  }
+}
+
+@media (max-width: 420px) {
+  .card-content { padding: 18px; }
+  .card-image { width: 100%; max-width: 320px; }
+  .slidercard-title { font-size: 28px; }
+}

@@ -1,0 +1,123 @@
+/* ✅ Whole layout container */
+.features-section {
+  display: flex;
+  justify-content: space-between; /* keep grid left, text right and align to container edges */
+  align-items: flex-start;
+  gap: 90px;
+  padding: 100px 0; /* rely on .site-container for horizontal spacing */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ✅ 2 columns × 3 rows left grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+  width: 62%; /* keep left grid aligned relative to text column */
+}
+
+/* ✅ GLASS CARD */
+.feature-card {
+  width: 100%;
+  height: 180px; /* fixed height so all cards match */
+  padding: 16px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* ✅ Icon inside card */
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  opacity: 0.96;
+  margin-bottom: 10px;
+}
+
+/* ✅ Text inside card */
+.feature-title {
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  font-family: raddit, system-ui;
+}
+
+/* ✅ Right side */
+.features-text {
+  width: 36%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.features-text h1 {
+  font-size: 48px;
+  margin-top: 18px;
+}
+
+.features-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-top: 12px;
+  opacity: 0.95;
+  max-width: 520px;
+  text-align: left;
+}
+
+/* Responsive rules */
+@media (max-width: 900px) {
+  .features-section {
+    flex-direction: column;
+    padding: 60px 12px;
+    gap: 30px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-text {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    width: 100%;
+    height: auto;
+    padding: 14px;
+  }
+
+  .features-text h1 {
+    font-size: 28px;
+  }
+
+  .features-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  .features-section { padding: 30px 12px; }
+}

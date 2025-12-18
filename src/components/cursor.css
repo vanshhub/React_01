@@ -1,0 +1,24 @@
+.custom-cursor {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: transparent;
+  border: 2px solid rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  transition: 
+    width 0.25s ease,
+    height 0.25s ease,
+    background 0.25s ease,
+    border 0.25s ease;
+z-index: 9999999 !important;
+}
+
+/* When active (Hero section) */
+.cursor-active {
+  width: 40px;
+  height: 40px;
+  /* background: rgba(255, 255, 255, 0.2); */
+  border-color: rgb(255, 255, 255);
+}

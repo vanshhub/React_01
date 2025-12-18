@@ -1,0 +1,55 @@
+.logo-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position:relative;
+  margin: 150px auto 0 auto;
+  background: linear-gradient(100deg, rgb(0, 255, 255), rgba(240, 209, 66, 0.87));  
+  backdrop-filter: blur(5px);
+ /* border: 1px solid rgba(255, 255, 255, 0.471); */
+  border-radius: 15px 50px;
+
+}
+
+.heading-logo-slider , h2{
+ text-align: center;
+ font-size: 17px;
+ font-family:"raddit", system-ui;
+ color: rgb(255, 255, 255);
+ 
+ font-weight: 600;
+ margin-top: 10px;
+}
+
+.logo-track {
+  display: flex;
+  width: calc(250px * 10); /* adjust based on number of logos */
+  animation: scroll 25s linear infinite;
+  
+}
+
+.logo-item {
+  width: 250px; /* fixed width ensures perfect sliding */
+  display: flex;
+  /* padding: 10px 0px; */
+  align-items: center;
+  justify-content: center;
+}
+
+/* /* .logo-item img {
+  /* height: 45px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s ease;
+  opacity: 0.85; 
+ */
+
+.logo-item img:hover {
+  filter: none;
+  opacity: 1; 
+  transform:scale(1.05) ;
+}
+
+/* TRUE INFINITE SLIDE */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 5)); }
+}

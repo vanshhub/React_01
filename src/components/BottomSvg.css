@@ -1,0 +1,15 @@
+.bottom-svg-wrapper {
+  position: fixed;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 999999 !important;  /* 🔥 always on top */
+}
+
+
+.bottom-svg-wrapper svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}

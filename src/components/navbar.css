@@ -1,0 +1,209 @@
+/* src/components/Navbar.css */
+.navbar {
+  position: relative;
+  margin: 30px auto;
+  width: min(1180px, 95%);
+  padding: 10px 24px;
+  border-radius: 28px;
+
+  z-index: 1000;
+  box-sizing: border-box;
+
+  display: block;
+
+  /* ✅ GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* When product page is active, pin the navbar over the hero with same glass effect */
+.product-page-active .navbar {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1180px, 95%);
+  z-index: 1100;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icon {
+  height: 32px;
+  width: 36px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  font-family: raddit, system-ui;
+
+}
+
+.logo-link { display: inline-flex; align-items:center;  text-decoration:none; }
+
+.logo .brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  
+}
+
+.nav-icon { display: block; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6)); }
+
+/* ✅ Search box container */
+.search-box {
+  position: relative;
+  width: 320px;
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ Search input */
+.search-input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.408);
+
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  color: rgba(255, 255, 255, 0.689);
+  font-size: 14px;
+  outline: none;
+}
+
+/* ✅ Search icon positioned inside input */
+.search-icon {
+  width: 20px;
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+
+}
+
+.search-icon:hover {
+  opacity: 1;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-weight: 300;
+  font-family: reddit, system-ui;
+  align-items: center;
+}
+
+.nav-links li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  padding-bottom: 5px;
+}
+
+/* ✅ Underline: initially hidden at CENTER */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px; 
+  transform: translateX(-50%);
+  border-radius: 50px;
+  width: 0%;
+  height: 3px;
+  
+  background: linear-gradient(90deg, cyan, rgb(255, 217, 1)); /* ✅ GRADIENT */
+  transition: width 0.4s ease;
+}
+
+/* ✅ Hover → underline expands from center outward */
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Menu button (hidden on desktop) */
+.menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Mobile menu panel (hidden unless .mobile-menu shown by React) */
+.mobile-menu {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 14px;
+    border-radius: 14px;
+  }
+
+  .navbar-inner {
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none; /* hide desktop links */
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+  }
+
+  .logo .brand { display: inline-block; }
+  .nav-icon { height: 26px; width: 28px; }
+
+  .mobile-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+
+  .mobile-link:hover {
+    background: rgba(255,255,255,0.02);
+  }
+}
