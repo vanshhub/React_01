@@ -6,7 +6,7 @@ import { cardsData } from "./CardData.js";
 import bgVideo from "./assets/18419947-uhd_3840_2160_30fps.mp4";
 import Features from "./components/features.jsx";
 import Footer from "./components/Footer";
-import Hero from "./components/hero.jsx";
+import Hero from "./components/Hero.jsx";
 import BottomSvg from "./components/BottomSvg";
 import LogoSlider from "./components/LogoSlider";
 import Layout from "./components/Layout";
