@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import "./Cursor.css";
+import "./cursor.css";
 
 
 export default function Cursor({ active }) {
