@@ -1,5 +1,5 @@
 import React from "react";
-import "./bottomsvg.css";
+import "./BottomSvg.css";
 
 export default function BottomSvg() {
   return (
