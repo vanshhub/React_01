@@ -1,6 +1,6 @@
 // src/components/Hero.jsx
 import React from "react";
-import "./hero.css";
+import "./Hero.css";
 import icon1 from "../assets/github.png";
 import icon2 from "../assets/discord.png";
 import uparrow from "../assets/up-left-arrow.png";
